@@ -1,7 +1,8 @@
 on:
-  push:
-    tags:
-      - '*'
+  push
+  # push:
+  #   tags:
+  #     - '*'
 
 name: Upload Release Asset
 
@@ -20,9 +21,9 @@ jobs:
         run: sed -i '1d' RESUME.md
 
       - name: Build PDF from Markdown
-        uses: BaileyJM02/markdown-to-pdf@v1
+        uses: BaileyJM02/markdown-to-pdf@v1.2.0
         with:
-          input_dir: .
+          input_path: RESUME.md
           output_dir: out
 
       - name: Rename pdf
@@ -30,7 +31,7 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1
+        uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -41,7 +42,7 @@ jobs:
 
       - name: Upload Release Asset
         id: upload-release-asset
-        uses: actions/upload-release-asset@v1
+        uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
