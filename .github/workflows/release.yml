@@ -27,7 +27,7 @@ jobs:
           output_dir: out
 
       - name: Rename pdf
-        run: cp out/RESUME.pdf ./$RESUME_FILE_NAME.pdf
+        run: cp out/RESUME.pdf ./duc_nguyen_resume.pdf
 
       - name: Create Release
         id: create_release
@@ -47,6 +47,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./$RESUME_FILE_NAME.pdf
-          asset_name: $RESUME_FILE_NAME.pdf
+          asset_path: ./duc_nguyen_resume.pdf
+          asset_name: duc_nguyen_resume.pdf
           asset_content_type: application/pdf
