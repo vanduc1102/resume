@@ -1,9 +1,9 @@
-[![](https://img.shields.io/badge/PDF-Download-1abc9c?style=for-the-badge)](https://github.com/sladkoff/resume/releases/latest/download/leonid_koftun_resume.pdf) &nbsp; [![](https://img.shields.io/badge/leonidkoftun-2867B2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leonid-koftun/) &nbsp; [![](https://img.shields.io/badge/sladkovik-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/sladkovik) &nbsp; [![](https://img.shields.io/badge/sladkoff2-8a3ab9?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/sladkoff2/)
+[![](https://img.shields.io/badge/PDF-Download-1abc9c?style=for-the-badge)](https://github.com/vanduc1102/resume/releases/latest/download/duc_nguyen_resume.pdf) &nbsp; [![](https://img.shields.io/badge/leonidkoftun-2867B2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leonid-koftun/) &nbsp; [![](https://img.shields.io/badge/sladkovik-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/sladkovik) &nbsp; [![](https://img.shields.io/badge/sladkoff2-8a3ab9?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/sladkoff2/)
 
 
 # Duc Nguyen
 
-[leonid.koftun@gmail.com](mailto:leonid.koftun@gmail.com) // from Munich, Bavaria // speaks English, German, Russian and French
+[vanducld@gmail.com](mailto:vanducld@gmail.com) // from Munich, Bavaria // speaks English, German, Russian and French
 
 ## Professional Experience
 
