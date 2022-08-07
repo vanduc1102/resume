@@ -1,8 +1,7 @@
 on:
-  push
-  # push:
-  #   tags:
-  #     - '*'
+  push:
+    tags:
+      - '*'
 
 name: Upload Release Asset
 
