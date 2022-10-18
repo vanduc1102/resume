@@ -1,46 +1,65 @@
-[![](https://img.shields.io/badge/PDF-Download-1abc9c?style=for-the-badge)](https://github.com/vanduc1102/resume/releases/latest/download/duc_nguyen_resume.pdf) &nbsp; [![](https://img.shields.io/badge/leonidkoftun-2867B2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vanduc1102/) &nbsp; [![](https://img.shields.io/badge/sladkovik-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/vanducld) &nbsp; [![](https://img.shields.io/badge/sladkoff2-8a3ab9?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/sladkoff2/)
-
+[![](https://img.shields.io/badge/PDF-Download-1abc9c?style=for-the-badge)](https://github.com/vanduc1102/resume/releases/latest/download/duc_nguyen_resume.pdf)
 
 # Duc Nguyen
 
-[vanducld@gmail.com](mailto:vanducld@gmail.com) // from Munich, Bavaria // speaks English, German, Russian and French
+[vanducld@gmail.com](mailto:vanducld@gmail.com) // from Binh Trung Dong Ward, Thu Duc City, Ho Chi Minh City, Viet Nam // speaks English and Vietnamese
+
+## Summary
+
+I have been working in software development in 2012. My main objective is deliver softwares to help people
+
+Design and implement solution for customer
 
 ## Professional Experience
 
-### Software Engineer - Device Insight GmbH, _Munich, December 2017 - present_
+### Software Engineer - WizeLine Viet Nam, _Ho Chi Minh, April 2017 - present_
 
-- Delivered features for more than five Industrial IoT projects in the sectors: Automotive, Building Management and Energy Optimization.
-- Designed, developed, tested and maintained micro- and nano-services for real-time data processing use-cases. (Java, Kotlin, Spring Boot, Kafka, Docker, Kubernetes, AKS, Postgres, Cassandra, Azure Functions, Azure Event Hubs, Typescript)
-- Enabled faster release cycles by establishing continuous deployment pipelines. (Gitlab CI, Github Actions, Flux CD, IaC, GitOps)
-- Led designs for distributed software components, systems and features.
-- Ensured availability of services and infrastructure by resolving incidents while on-call. (Grafana, Prometheus, Splunk)
+- Offline Receipt, A Happy Fresh mini app. Lead development team to deliver the small app on time.
+- Rokt Small Ecommerce: Work with client to deliver extensions for Shopify,BigCommerce, WooCommerce
+- BoomIN: Lead frontend team to deliver property playground
+- TheAustralian App: Migrated old backend from Twig2 to PHP, save customer a half of million AUD.
+- Cashback Balance API: Lead backend team with 2 engineers, communicate with TrueWallet team to deliver CashBack feature on time (Java, SpringBoot)
+- MessengerBot: Developed bots for NewsCorpAU news site to get more users engaging with their sites (NodeJS, Facebook App)
+- TangramUI: Developed components for re-image NewsCorpAU websites (PHP, Wordpress, NodeJS, JS)
 
-### Freelance Software Engineer - _March 2013 - present_
+### Software Engineer - Axon Active Viet Nam, _Ho Chi Minh, October 2013 - April 2017_
 
-- Designed, implemented and launched a MVP for a Cloud-based childcare management software. (Digital Ocean Cloud, Kubernetes, Auth0, Stripe, Sendgrid, Next.js, NestJS, TypeScript, TypeORM, Flux CD, Cypress)
+- Working in SCRUM team, designed and delivered some projects in Human Resources domain. Technologies: AngularJS, HTML, CSS, Bootstrap, Java, SQL Server, Jboss.
+- Fixed bugs and added new features on existing systems, the systems built on Ivy BPM. Technologies: JSP, Java, SQL Server.
 
-### Software Developer - SUBSEQ.NET GmbH, _Munich, October 2013 - November 2017_
+### Software Developer - Technology Art Viet Nam, _Ho Chi Minh, July 2012 - October 2013_
 
-- Designed reusable modules for a company internal web application framework based on Spring Boot, allowing for rapid bootstrapping of new apps. (Spring Boot, Postgres, Ebean ORM, Maven, Javascript)
-- Created, launched and maintained multiple web apps (“insta.vote”, “ipwatch.dog”, “nxt.is”) based on in-house web application framework (Java 8, Spring Boot, Ebean ORM, Postgres, Freemarker, Vue JS, Bootstrap, WebSockets, Webpack)
-- Created a prototype web app for comparing large Excel catalog files which resulted in the client’s successful acquisition. Conducted workshops with the client. (Java 8, Spring Boot, Jooq, Postgres, Apache POI, Bootstrap)
-- Led the rewrite of the legacy Android app “fishpixl” and launched it successfully to the Google Play Store (React Native, Android, Redux)
-- Set up and maintained Docker Cloud linux nodes. Maintained the development infrastructure including ELK Stack, Prometheus, Grafana, Gitlab CE.
+- Delivered a proof of concept (POC) project for healthcare management. Technologies: Java, MySQL, Strut2, HTML, CSS
 
 ## Education
 
-### Werner-von-Siemens Gymnasium, _Munich, July 2013_
+### Ho Chi Minh University of Technology - HCMUT, _Ho Chi Minh, September 2008 - May 2013_
 
-Higher education entrance qualification / BAC (Final Grade: 2.7)
+B. Sc. Computer Science (7.4/10.0)
 
-### Ludwig-Maximilians-Universität, _Munich, September 2013 - August 2015_
+## Certifications
 
-B. Sc. Computer Science (partial)
+### Google Cloud Platform
 
-### Wilhelm-Büchner-Fernhochschule, _September 2016 - present_
+- Professional Cloud Developer - ID: vxvbuk0y
+- Professional Cloud Architect - [ID: P0lvtV](https://www.credential.net/eabaacb7-ce45-4d8a-ad13-f7d43cbc6c9f)
+- Associate Cloud Engineer - ID: 6lrlwd1q
 
-B. Sc. Computer Science (partial)
+### Amazon Web Services
+
+- AWS Certified Solutions Architect - ID: AWS00831654
 
 ## Interests
 
-Weight lifting, gardening, pour art, hiking, swimming, 3D printing, DIY, cars, mental health, cooking, music, poker
+Hiking, swimming, mental health, cooking, music
+
+## References
+
+You can get more detail about my developer’s life here:
+
+- StackOverflow: http://stackoverflow.com/users/1681903/vanduc1102
+- Github: https://github.com/vanduc1102
+- Blog: https://aducdev.blogspot.com/
+- CodeSignal: https://app.codesignal.com/profile/vanduc1102
+- HackerRank: https://www.hackerrank.com/vanducld
+- LeetCode: https://leetcode.com/vanduc1102/

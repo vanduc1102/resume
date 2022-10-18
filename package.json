@@ -1,0 +1,24 @@
+{
+  "name": "ducnguyen-resume",
+  "version": "1.0.0",
+  "description": "Duc Nguyen Resume",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format:write": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanduc1102/resume.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanduc1102/resume/issues"
+  },
+  "homepage": "https://github.com/vanduc1102/resume#readme",
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}
