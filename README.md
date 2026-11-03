@@ -1,16 +1,14 @@
 # Duc Nguyen Resume
 
-[![](https://img.shields.io/badge/PDF-Download-1abc9c?style=for-the-badge)](https://github.com/vanduc1102/resume/releases/latest/download/duc_nguyen_resume.pdf)
+[![Download PDF](https://img.shields.io/badge/PDF-Download-1abc9c?style=for-the-badge)](https://github.com/vanduc1102/resume/releases/latest/download/duc_nguyen_resume.pdf)
 
-## About
+Build a modern resume PDF from Markdown. [`RESUME.md`](RESUME.md) is the single source of truth; the npm build renders it into an HTML preview and a selectable-text A4 PDF.
 
-This project turns a Markdown resume into a modern, selectable-text PDF and an HTML preview. [`RESUME.md`](RESUME.md) is the single source of truth; no document editor or manually maintained PDF is needed.
-
-The design uses a clean single-column layout, subtle teal accents, clear typography, and A4 print styles. Content stays in reading order for applicant tracking systems (ATS).
+The design uses a clean single-column layout, subtle teal accents, and clear typography. Content remains in reading order, without columns or image-based text.
 
 ## Build locally
 
-Use Node.js 24 or newer and **npm** (the only supported package manager):
+Use **Node.js 26** (see [`.nvmrc`](.nvmrc)) and **npm**, the only supported package manager.
 
 ```sh
 npm ci
@@ -18,34 +16,31 @@ npx playwright install chromium
 npm run build
 ```
 
-On Linux, use `npx playwright install --with-deps chromium` to install browser system dependencies too.
+On Linux, use `npx playwright install --with-deps chromium` to install the browser's system dependencies too.
 
-The `out/` directory contains:
+Generated files are written to the ignored `out/` directory:
 
-- `duc_nguyen_resume.html`: open this file in a browser to preview the design.
-- `duc_nguyen_resume.pdf`: the stable download filename.
-- `duc_nguyen_resume_YYYY-MM-DD.pdf`: a copy stamped with the UTC build date.
+| File                               | Purpose                                                |
+| ---------------------------------- | ------------------------------------------------------ |
+| `duc_nguyen_resume.html`           | Open in a browser to preview the design.               |
+| `duc_nguyen_resume.pdf`            | Stable filename used by the download badge.            |
+| `duc_nguyen_resume_YYYY-MM-DD.pdf` | Identical PDF with the UTC build date in its filename. |
 
-Edit [`styles/resume.css`](styles/resume.css) to customize typography, colors, spacing, and page margins. Rebuild after changing content or styles. Content before the first `#` heading (including the download badge) is omitted from the output, without modifying `RESUME.md`.
+## Edit the resume
 
-### Why not the Markdown-to-PDF action?
+1. Update the content in [`RESUME.md`](RESUME.md).
+2. Customize typography, colors, spacing, and page margins in [`styles/resume.css`](styles/resume.css).
+3. Run `npm run build` and review the generated HTML and PDF.
 
-The build now uses [Marked](https://marked.js.org/) to render Markdown and [Playwright](https://playwright.dev/) to print it with Chromium. The same npm command runs locally and in CI, with dependency versions locked in `package-lock.json`. Custom CSS replaces the generic GitHub document theme.
+The build omits content before the first level-one heading, including the download badge, without modifying the Markdown source.
 
-`BaileyJM02/markdown-to-pdf` is no longer needed. Its v1.2.0 Docker image uses Node.js 18 and installs Chrome separately. The new build avoids that container and keeps the renderer and browser version managed through npm and Playwright. Rendering uses local system fonts and blocks network requests; no external font or badge service is needed.
+## Rendering
 
-## How it works
+[Marked](https://marked.js.org/) converts Markdown to HTML, and [Playwright](https://playwright.dev/) prints it using Chromium and the project's CSS. The same build runs locally and in GitHub Actions, with npm dependencies locked in `package-lock.json`.
 
-1. Edit [`RESUME.md`](RESUME.md). It is the single source of truth.
-2. Build locally to review the HTML and PDF.
-3. Pull requests and pushes to `main` run formatting checks, build the resume, run tests, and upload preview artifacts.
-4. Push a tag to publish a GitHub release through the [release workflow](.github/workflows/release.yml):
-   - `duc_nguyen_resume.pdf`, which is the file the download badge links to.
-   - `duc_nguyen_resume_YYYY-MM-DD.pdf`, which is stamped with the build date.
+PDF rendering uses local system fonts and blocks network requests. No external font service, Docker image, or third-party Markdown-to-PDF action is needed.
 
-## Development
-
-After making changes:
+## Checks
 
 ```sh
 npm run format:write
@@ -53,4 +48,17 @@ npm run format:check
 npm test
 ```
 
-`npm test` builds the resume first, then checks Markdown rendering, badge removal, UTC filenames, responsive layout, and generated PDF files. Releases use GitHub's built-in `GITHUB_TOKEN` with write access only in the publishing job; a separate `RELEASE_TOKEN` secret is no longer required.
+`npm test` builds the resume, then checks Markdown rendering, badge removal, UTC filenames, responsive layout, and matching stable and dated PDF files.
+
+## GitHub Actions and releases
+
+The [workflow](.github/workflows/release.yml) runs on pull requests, pushes to `main`, tags, and manual dispatches. It installs dependencies with `npm ci`, installs Chromium, checks formatting, builds and tests the resume, and uploads the generated files as a `resume` artifact.
+
+Tag pushes also publish both PDFs to a GitHub release. For example:
+
+```sh
+git tag v1.0.1
+git push origin v1.0.1
+```
+
+The publishing job uses GitHub's built-in `GITHUB_TOKEN` with `contents: write`; the build job has read-only repository permissions. No separate `RELEASE_TOKEN` secret is required.

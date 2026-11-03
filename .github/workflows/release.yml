@@ -23,7 +23,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: "24"
+          node-version-file: .nvmrc
           cache: npm
 
       - name: Install dependencies
@@ -42,7 +42,9 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: resume
-          path: out/
+          path: |
+            out/duc_nguyen_resume.html
+            out/duc_nguyen_resume*.pdf
           if-no-files-found: error
 
   release:
@@ -53,7 +55,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Download PDFs
+      - name: Download resume
         uses: actions/download-artifact@v8
         with:
           name: resume
@@ -62,5 +64,5 @@ jobs:
       - name: Create release
         uses: softprops/action-gh-release@v3
         with:
-          files: out/*.pdf
+          files: out/duc_nguyen_resume*.pdf
           fail_on_unmatched_files: true
