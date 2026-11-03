@@ -18,11 +18,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
+<<<<<<< HEAD
         uses: actions/checkout@v7
 
       - name: Set up Node.js
         uses: actions/setup-node@v7
+||||||| 09fab2b
+        uses: actions/checkout@v2
+      - name: Remove swag line
+        run: sed -i '1d' README.md
+      - name: Build PDF from Markdown
+        uses: BaileyJM02/markdown-to-pdf@v1
+=======
+        uses: actions/checkout@v3
+      - name: Remove swag line
+        run: sed -i '1d' README.md
+      - name: Build PDF from Markdown
+        uses: BaileyJM02/markdown-to-pdf@v1.2.0
+>>>>>>> origin/main
         with:
+<<<<<<< HEAD
           node-version: "24"
           cache: npm
 
@@ -40,6 +55,27 @@ jobs:
 
       - name: Upload preview
         uses: actions/upload-artifact@v7
+||||||| 09fab2b
+          input_dir: .
+          output_dir: out
+      - name: Rename pdf
+        run: cp out/README.pdf ./leonid_koftun_resume.pdf
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+=======
+          input_path: README.md
+          output_dir: out
+      - name: Rename pdf
+        run: cp out/README.pdf ./leonid_koftun_resume.pdf
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+>>>>>>> origin/main
         with:
           name: resume
           path: out/
@@ -56,6 +92,7 @@ jobs:
       - name: Download PDFs
         uses: actions/download-artifact@v8
         with:
+<<<<<<< HEAD
           name: resume
           path: out/
 
@@ -64,3 +101,14 @@ jobs:
         with:
           files: out/*.pdf
           fail_on_unmatched_files: true
+||||||| 09fab2b
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./leonid_koftun_resume.pdf
+          asset_name: leonid_koftun_resume.pdf
+          asset_content_type: application/pdf
+=======
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./leonid_koftun_resume.pdf
+          asset_name: leonid_koftun_resume.pdf
+          asset_content_type: application/pdf
+>>>>>>> origin/main
