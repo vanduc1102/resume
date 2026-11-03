@@ -1,52 +1,66 @@
+name: Build and release resume
+
 on:
   push:
+    branches:
+      - main
     tags:
       - "*"
+  pull_request:
+  workflow_dispatch:
 
-name: Upload Release Asset
-
-env:
-  RESUME_FILE_NAME: duc_nguyen_resume
+permissions:
+  contents: read
 
 jobs:
   build:
-    name: Upload Release Asset
+    name: Build resume
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
 
-      - name: Remove swag line
-        run: sed -i '1d' RESUME.md
-
-      - name: Build PDF from Markdown
-        uses: BaileyJM02/markdown-to-pdf@v1.2.0
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
         with:
-          input_path: RESUME.md
-          output_dir: out
+          node-version: "24"
+          cache: npm
 
-      - name: Rename pdf
-        run: |
-          cp out/RESUME.pdf "./${RESUME_FILE_NAME}.pdf"
-          cp out/RESUME.pdf "./${RESUME_FILE_NAME}_$(date -u +%Y-%m-%d).pdf"
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Create Release
-        id: create_release
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Build and test resume
+        run: npm test
+
+      - name: Upload preview
+        uses: actions/upload-artifact@v7
+        with:
+          name: resume
+          path: out/
+          if-no-files-found: error
+
+  release:
+    name: Publish PDFs
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download PDFs
+        uses: actions/download-artifact@v8
+        with:
+          name: resume
+          path: out/
+
+      - name: Create release
         uses: softprops/action-gh-release@v3
-        env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
-
-      - name: Upload Release Asset
-        id: upload-release-asset
-        uses: softprops/action-gh-release@v3
-        env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-        with:
-          files: |
-            ${{ env.RESUME_FILE_NAME }}.pdf
-            ${{ env.RESUME_FILE_NAME }}_*.pdf
+          files: out/*.pdf
+          fail_on_unmatched_files: true
