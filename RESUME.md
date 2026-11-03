@@ -2,34 +2,45 @@
 
 # Duc Nguyen
 
-[vanducld@gmail.com](mailto:vanducld@gmail.com) // from Binh Trung Dong Ward, Thu Duc City, Ho Chi Minh City, Viet Nam // speaks English and Vietnamese
+**Full Stack Developer | React | Node.js | Java & Spring Boot**
+
+Ho Chi Minh City, Viet Nam | [vanducld@gmail.com](mailto:vanducld@gmail.com) | [GitHub](https://github.com/vanduc1102) | English & Vietnamese
 
 ## Summary
 
-I have been working in software development since 2012. My main objective is to deliver software that helps people.
+Full Stack Developer with software development experience since 2012, working across React frontends and Node.js and Java/Spring Boot backends. Experience leading frontend and backend teams, collaborating with clients, and delivering applications across e-commerce, media, property, HR, and healthcare.
 
-Design and implement solutions for customers.
+## Technical Skills
+
+- **Frontend:** React, JavaScript, AngularJS, HTML, CSS, Bootstrap
+- **Backend:** Node.js, Java, Spring Boot, PHP, JSP, Struts 2
+- **Data & platforms:** MySQL, SQL Server, WordPress, JBoss, Ivy BPM
+- **Delivery:** Full-stack development, team leadership, client collaboration, Scrum
 
 ## Professional Experience
 
 ### Software Engineer - Wizeline Viet Nam, _Ho Chi Minh, April 2017 - present_
 
-- Offline Receipt, a HappyFresh mini app. Led the development team to deliver the small app on time.
-- Rokt Small Ecommerce: Worked with clients to deliver extensions for Shopify, BigCommerce, WooCommerce
-- BoomIN: Led the frontend team to deliver a property playground
-- TheAustralian App: Migrated the old backend from Twig2 to PHP, saving the customer half a million AUD.
-- Cashback Balance API: Led a backend team of 2 engineers and communicated with the TrueWallet team to deliver the Cashback feature on time (Java, Spring Boot)
-- MessengerBot: Developed bots for NewsCorpAU news site to get more users engaged with their sites (Node.js, Facebook App)
-- TangramUI: Developed components to re-imagine NewsCorpAU websites (PHP, WordPress, Node.js, JS)
+**Role focus:** Full-stack development across frontend and backend applications, with project-specific team leadership and direct client collaboration.
+
+- **Offline Receipt — HappyFresh | Full Stack Developer / Team Lead:** Led the development team to deliver the mini app on time.
+- **Rokt Small Ecommerce | Full Stack Developer:** Collaborated with clients to deliver extensions for Shopify, BigCommerce, and WooCommerce.
+- **BoomIN | Frontend Lead:** Led the frontend team to deliver a property playground.
+- **TheAustralian App | Full Stack Developer:** Migrated the legacy backend from Twig 2 to PHP, saving the customer AUD 500,000.
+- **Cashback Balance API | Backend Lead:** Led a two-engineer backend team using Java and Spring Boot. Coordinated with the TrueWallet team to deliver the cashback feature on time.
+- **MessengerBot | Full Stack Developer:** Developed Node.js bots integrated with Facebook to support user engagement with NewsCorp Australia news sites.
+- **TangramUI | Full Stack Developer:** Built components for the redesign of NewsCorp Australia websites using PHP, WordPress, Node.js, and JavaScript.
 
 ### Software Engineer - Axon Active Viet Nam, _Ho Chi Minh, October 2013 - April 2017_
 
-- Worked in a Scrum team, designed and delivered several projects in Human Resources domain. Technologies: AngularJS, HTML, CSS, Bootstrap, Java, SQL Server, JBoss.
-- Fixed bugs and added new features to existing systems built on Ivy BPM. Technologies: JSP, Java, SQL Server.
+**Role focus:** Full-stack development for HR applications in a Scrum team.
+
+- **HR Applications | Full Stack Developer:** Designed and delivered frontend and backend features using AngularJS, HTML, CSS, Bootstrap, Java, SQL Server, and JBoss.
+- **Ivy BPM Systems | Full Stack Developer:** Implemented new features and resolved defects in existing business process applications using JSP, Java, and SQL Server.
 
 ### Software Developer - Technology Art Viet Nam, _Ho Chi Minh, July 2012 - October 2013_
 
-- Delivered a proof of concept (POC) project for healthcare management. Technologies: Java, MySQL, Struts 2, HTML, CSS.
+- **Healthcare Management | Full Stack Developer:** Delivered a proof of concept spanning frontend and backend development using Java, Struts 2, MySQL, HTML, and CSS.
 
 ## Education
 
@@ -53,13 +64,7 @@ B.Sc. Computer Science (7.4/10.0)
 
 Hiking, swimming, mental health, cooking, music
 
-## References
+## Professional Profiles
 
-You can get more details about my developer life here:
-
-- Stack Overflow: http://stackoverflow.com/users/1681903/vanduc1102
-- GitHub: https://github.com/vanduc1102
-- Blog: https://aducdev.blogspot.com/
-- CodeSignal: https://app.codesignal.com/profile/vanduc1102
-- HackerRank: https://www.hackerrank.com/vanducld
-- LeetCode: https://leetcode.com/vanduc1102/
+- [Stack Overflow](https://stackoverflow.com/users/1681903/vanduc1102) | [Technical Blog](https://aducdev.blogspot.com/)
+- [CodeSignal](https://app.codesignal.com/profile/vanduc1102) | [HackerRank](https://www.hackerrank.com/vanducld) | [LeetCode](https://leetcode.com/vanduc1102/)
